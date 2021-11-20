@@ -27,9 +27,9 @@ configure_file ( # for exporting info to C++ (e.g. project version)
 	${CMAKE_CURRENT_SOURCE_DIR}/include/${PROJECT_NAME}/info.hh
 )
 
-target_compile_features ( ${PROJECT_NAME} PUBLIC cxx_std_23                                        ) # Set C++ standard to C++2b
-target_compile_options  ( ${PROJECT_NAME} PUBLIC "$<$<COMPILE_LANG_AND_ID:CXX,MSVC>:/permissive->" ) # To help ensure cross-platform compatibility
-set_target_properties   ( ${PROJECT_NAME} PROPERTIES CXX_EXTENSIONS OFF                            ) # Ditto
+# target_compile_features ( ${PROJECT_NAME} PUBLIC cxx_std_23                                        ) # Set C++ standard to C++2b
+# target_compile_options  ( ${PROJECT_NAME} PUBLIC "$<$<COMPILE_LANG_AND_ID:CXX,MSVC>:/permissive->" ) # To help ensure cross-platform compatibility
+# set_target_properties   ( ${PROJECT_NAME} PROPERTIES CXX_EXTENSIONS OFF                            ) # Ditto
 
 #--------------------------- External dependencies: ----------------------------#
 # include ( cmake/CPM.cmake )

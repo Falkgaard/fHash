@@ -2,6 +2,7 @@
 tmp/
 bin/
 obj/
+build/
 
 # Prerequisites
 *.d
