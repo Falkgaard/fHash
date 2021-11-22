@@ -2,7 +2,7 @@ cmake_minimum_required( VERSION 3.21 FATAL_ERROR )
 
 project(
 	fHash
-	VERSION     1.1
+	VERSION     0.1
 	DESCRIPTION "A FALK library module for hashing."
 	LANGUAGES   CXX
 )
@@ -15,13 +15,12 @@ set          ( CMAKE_POLICY_DEFAULT_CMP0069       NEW )
 set ( HEADERS
 	core.h
 	info.h
-	# ^--- add sources here
 )
 
 add_library                ( ${PROJECT_NAME} INTERFACE ) 
 target_sources             ( ${PROJECT_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include/${PROJECT_NAME}/${HEADERS} )
 target_include_directories ( ${PROJECT_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include )
-target_link_libraries      ( ${PROJECT_NAME} INTERFACE ${PROJECT_NAME} )
+#target_link_libraries      ( ${PROJECT_NAME} INTERFACE ${PROJECT_NAME} )
 
 configure_file ( # for exporting info to C++ (e.g. project version)
 	${CMAKE_CURRENT_SOURCE_DIR}/include/${PROJECT_NAME}/info.h.in
