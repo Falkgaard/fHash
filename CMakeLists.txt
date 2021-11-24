@@ -57,7 +57,7 @@ configure_file ( # for exposing info to C++ (e.g. project version)
 
 install(
 	TARGETS ${PROJECT_NAME}
-	EXPORT ${PROJECT_NAME}_Targets
+	EXPORT ${PROJECT_NAME}_targets
 	ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 	LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 	RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
@@ -82,8 +82,8 @@ configure_package_config_file(
 	PATH_VARS INCLUDE_INSTALL_DIR
 )
 
-install( EXPORT ${PROJECT_NAME}_Targets
-	FILE         ${PROJECT_NAME}Targets.cmake
+install( EXPORT ${PROJECT_NAME}_targets
+	FILE         ${PROJECT_NAME}_targets.cmake
 	NAMESPACE    ${PROJECT_NAME}::
 	DESTINATION  ${CMAKE_INSTALL_DATAROOTDIR}/${PROJECT_NAME}/cmake
 )
