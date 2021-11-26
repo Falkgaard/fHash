@@ -1,3 +1,6 @@
+# Generated headers
+include/fHash/info.h
+
 # Directories
 tmp/
 bin/
