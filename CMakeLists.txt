@@ -1,6 +1,6 @@
-cmake_minimum_required( VERSION 3.21 FATAL_ERROR )
+cmake_minimum_required ( VERSION 3.21 FATAL_ERROR )
 
-project(
+project (
 	fHash
 	VERSION     0.1.0
 	DESCRIPTION "A FALK library module for hashing."
@@ -23,3 +23,5 @@ configure_file ( # for exposing info to C++ (e.g. project version)
 	${CMAKE_CURRENT_SOURCE_DIR}/cmake/info.h.in
 	${CMAKE_CURRENT_SOURCE_DIR}/include/${PROJECT_NAME}/info.h
 )
+
+# TODO: include guard
