@@ -1,5 +1,5 @@
 # Generated headers
-include/fHash/info.h
+include/fHash/info.hh
 
 # Directories
 tmp/
